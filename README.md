@@ -27,7 +27,7 @@ Running results on WeChat and mobile browsers
 <p>　　One-click skin for controls. A pile of skin can choose, but also according to their own needs in the Internet to find pictures, import their own skin.
 <p>　　The skin can be HSI transform, is popular in terms of color, programmers do not have to find the love of the skin but don't take that tone.
 <p>　　Screen adaptation function: in different browser window size, especially different types of mobile phones, the page can be designed as dynamic size, while the font can also be dynamically adjusted according to the size of the screen. These complex functions can be accomplished with just one-click.
-    <p><img src = "https://github.com/x3titan/ePage/blob/master/res/ePage005.jpg?raw=true">
+    <p><img src = "https://github.com/x3titan/ePage/blob/master/res/ePage006.jpg?raw=true">
         
 <p>　　EPage not only allows quick production of front-end pages, but also provides exceptionally powerful back-end development. Since the programmer does not have to worry about the interaction of Ajax, data packaging, or WebService functions and so forth, ePage provides a one-stop, non refresh page data interaction technology. As long as the programmer needs to use a unified JS code (stresses that both front-end and back-end can use JS code), database access, or WebService access, and so on. Greatly simplifies the complexity of the program, increasing the maintainability of the code, allowing programmers to have more energy to focus on business logic.
     <img src = "https://github.com/x3titan/ePage/blob/master/res/ePage007.jpg?raw=true">
