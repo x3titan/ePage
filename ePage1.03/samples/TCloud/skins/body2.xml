@@ -1,0 +1,16 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>Panel2</displayName>
+  <resizableArea>
+    <left>12</left>
+    <top>11</top>
+    <width>72</width>
+    <height>74</height>
+  </resizableArea>
+  <clientArea>
+    <left>7</left>
+    <top>7</top>
+    <width>82</width>
+    <height>82</height>
+  </clientArea>
+</skin>

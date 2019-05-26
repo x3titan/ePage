@@ -1,0 +1,18 @@
+<skin>
+    <clipMode>LR3x</clipMode>
+    <imageType>png</imageType>
+    <displayName>按钮半圆Q版蓝色</displayName>
+    <creator>custom</creator>
+    <resizableArea>
+        <left>31</left>
+        <top>0</top>
+        <width>59</width>
+        <height>51</height>
+    </resizableArea>
+    <clientArea>
+        <left>25</left>
+        <top>5</top>
+        <width>71</width>
+        <height>36</height>
+    </clientArea>
+</skin>

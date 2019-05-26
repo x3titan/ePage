@@ -1,0 +1,319 @@
+<page>
+  <controls count="7">
+    <control type="DivRoot" pathname="/divRoot">
+      <backgroundColor>ffffff</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <height>816</height>
+      <left>0</left>
+      <onPageCreate>var LODOP; //声明为全局变量 
+function preview() {        
+    createPrintPage();
+    LODOP.SET_SHOW_MODE("NP_NO_RESULT",true);//设置NP插件无返回，这可避免chrome对弹窗超时误报崩溃
+    LODOP.PREVIEW();        
+};
+
+function Design() {        
+    createPrintPage();
+    LODOP.PRINT_DESIGN();        
+};
+
+function print() {
+    createPrintPage()
+    LODOP.PRINT();    
+}
+
+function createPrintPage() {
+    LODOP=getLodop();  
+
+
+LODOP.PRINT_INITA("0mm","0mm","100.01mm","149.99mm","TCloud顺丰快递面单");
+LODOP.ADD_PRINT_RECT("1.06mm","0mm","96.04mm","14.55mm",0,1);
+LODOP.ADD_PRINT_RECT("15.35mm","0mm","68mm","18.52mm",0,1);
+LODOP.ADD_PRINT_RECT("15.35mm","67.73mm","28.31mm","18.52mm",0,1);
+LODOP.ADD_PRINT_BARCODE("18.52mm","9.53mm","48.95mm","13.23mm","Code39","444835526821");
+LODOP.ADD_PRINT_TEXT("17.46mm","69.06mm","26.46mm","7.94mm","顺丰次日");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+LODOP.ADD_PRINT_TEXT("23.55mm","69.32mm","21.17mm","5.29mm","目的地：");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",10);
+LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+LODOP.ADD_PRINT_TEXT("27.52mm","69.85mm","23.81mm","6.61mm","010");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",14);
+LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+LODOP.ADD_PRINT_RECT("33.6mm","0mm","96.04mm","15.88mm",0,1);
+LODOP.ADD_PRINT_TEXT("37.57mm","1.85mm","19.31mm","7.94mm","收方：");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+LODOP.ADD_PRINT_TEXT("34.66mm","14.29mm","80.7mm","14.02mm","北京 北京 朝阳区 三里屯接到亚秀大厦\r\nYann 15...(省略)");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",10);
+LODOP.ADD_PRINT_RECT("49.21mm","0mm","45.77mm","26.72mm",0,1);
+LODOP.ADD_PRINT_RECT("49.21mm","45.51mm","50.54mm","14.02mm",0,1);
+LODOP.ADD_PRINT_RECT("62.97mm","45.51mm","50.54mm","12.96mm",0,1);
+LODOP.ADD_PRINT_TEXT("50.54mm","1.59mm","42.07mm","24.61mm","月结账号：\r\n寄付现结");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+LODOP.ADD_PRINT_TEXT("51.33mm","47.36mm","46.57mm","11.64mm","代后货款：元\r\n卡号：");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",11);
+LODOP.ADD_PRINT_TEXT("64.56mm","47.63mm","46.57mm","10.32mm","运费：-\r\n费用合计：-");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",11);
+LODOP.ADD_PRINT_RECT("75.67mm","0mm","50.54mm","15.88mm",0,1);
+LODOP.ADD_PRINT_RECT("91.81mm","0mm","41.01mm","14.82mm",0,1);
+LODOP.ADD_PRINT_RECT("75.67mm","50.27mm","20.11mm","15.88mm",0,1);
+LODOP.ADD_PRINT_RECT("75.67mm","70.11mm","25.93mm","15.88mm",0,1);
+LODOP.ADD_PRINT_TEXT("77.52mm","1.06mm","14.82mm","6.61mm","寄方：");
+LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+LODOP.ADD_PRINT_TEXT("76.73mm","11.64mm","38.1mm","9mm","上海 上海 青浦区 明珠路73号\r\nTaylor 150...(省略)");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",7);
+LODOP.ADD_PRINT_TEXT("84.93mm","1.32mm","34.13mm","4.76mm","原寄地：021");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",7);
+LODOP.ADD_PRINT_TEXT("76.46mm","51.33mm","18.79mm","13.49mm","收件员：\r\n寄件日期：\r\n2017-06-12");
+LODOP.ADD_PRINT_TEXT("76.46mm","71.44mm","23.55mm","13.49mm","收方签署：\r\n\r\n日期：");
+LODOP.ADD_PRINT_RECT("91.81mm","40.75mm","55.3mm","14.82mm",0,1);
+LODOP.ADD_PRINT_BARCODE("93.93mm","46.04mm","47.1mm","10.58mm","Code39","444835526821");
+LODOP.ADD_PRINT_RECT("106.36mm","0mm","41.01mm","17.2mm",0,1);
+LODOP.ADD_PRINT_RECT("106.36mm","40.75mm","55.3mm","17.2mm",0,1);
+LODOP.ADD_PRINT_TEXT("110.86mm","1.59mm","7.41mm","9.79mm","寄方");
+LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+LODOP.ADD_PRINT_TEXT("107.69mm","8.73mm","31.22mm","14.82mm","上海 上海 青浦区 明珠路73号\r\nTaylor 150...(省略)");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",7);
+LODOP.ADD_PRINT_TEXT("110.86mm","42.33mm","7.41mm","9.79mm","收方");
+LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+LODOP.ADD_PRINT_TEXT("107.69mm","48.42mm","45.77mm","14.82mm","北京 北京 朝阳区 三里屯街道亚秀大厦\r\nYann 15...(省略)");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",7);
+LODOP.ADD_PRINT_RECT("123.3mm","0mm","11.91mm","4.76mm",0,1);
+LODOP.ADD_PRINT_RECT("123.3mm","11.64mm","60.85mm","4.76mm",0,1);
+LODOP.ADD_PRINT_RECT("123.3mm","72.23mm","23.81mm","4.76mm",0,1);
+LODOP.ADD_PRINT_TEXT("124.09mm","1.59mm","10.05mm","3.44mm","数量");
+LODOP.ADD_PRINT_TEXT("124.09mm","34.66mm","18.79mm","3.44mm","托寄物");
+LODOP.ADD_PRINT_TEXT("124.09mm","79.11mm","12.17mm","3.44mm","备注");
+LODOP.ADD_PRINT_RECT("127.79mm","11.64mm","60.85mm","10.05mm",0,1);
+LODOP.ADD_PRINT_RECT("127.79mm","0mm","11.91mm","10.05mm",0,1);
+LODOP.ADD_PRINT_RECT("127.79mm","72.23mm","23.81mm","10.05mm",0,1);
+LODOP.ADD_PRINT_RECT("137.58mm","0mm","72.5mm","12.44mm",0,1);
+LODOP.ADD_PRINT_RECT("137.58mm","72.23mm","23.81mm","12.44mm",0,1);
+LODOP.ADD_PRINT_TEXT("129.12mm","13.49mm","23.55mm","7.67mm","鞋子");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",10);
+LODOP.ADD_PRINT_TEXT("129.12mm","73.29mm","20.9mm","7.67mm","小心轻放");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",10);
+LODOP.ADD_PRINT_TEXT("139.17mm","1.85mm","23.55mm","7.67mm","订单号");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",10);
+LODOP.ADD_PRINT_TEXT("141.55mm","36.51mm","34.66mm","7.67mm","012657700222");
+LODOP.SET_PRINT_STYLEA(0,"FontName","Arial");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",10);
+LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+LODOP.ADD_PRINT_TEXT("139.17mm","73.82mm","21.17mm","10.58mm","费用合计：\r\n   --元");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",10);
+
+
+};    </onPageCreate>
+      <pageHead><![CDATA[<script language="javascript" src="Scripts/LodopFuncs.js"></script>]]></pageHead>
+      <top>0</top>
+      <width>1265</width>
+    </control>
+    <control type="Button" pathname="/divRoot/button2">
+      <backgroundSkin>TCloud000</backgroundSkin>
+      <backgroundSkin1>LRBtn7</backgroundSkin1>
+      <backgroundSkin2>LRBtn7</backgroundSkin2>
+      <cursor>pointer</cursor>
+      <fontColor>FFFFFF</fontColor>
+      <fontColor1>FFFFFF</fontColor1>
+      <fontColor2>FFFFFF</fontColor2>
+      <height>34</height>
+      <heightRatio>0.0416666666666667</heightRatio>
+      <left>109</left>
+      <leftRatio>0.0861660079051383</leftRatio>
+      <onClick>commitOrder();</onClick>
+      <sizeRatio>0.276422764227642</sizeRatio>
+      <text>test</text>
+      <top>80</top>
+      <topRatio>0.0980392156862745</topRatio>
+      <width>123</width>
+      <widthRatio>0.0972332015810277</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel1">
+      <backgroundSkin>App1PJ004</backgroundSkin>
+      <fontColor>FFFFFF</fontColor>
+      <hAlign>left</hAlign>
+      <height>686</height>
+      <heightRatio>0.840686274509804</heightRatio>
+      <left>272</left>
+      <leftRatio>0.21501976284585</leftRatio>
+      <sizeRatio>1.10645161290323</sizeRatio>
+      <text>ddfd</text>
+      <top>58</top>
+      <topRatio>0.071078431372549</topRatio>
+      <vAlign>top</vAlign>
+      <width>620</width>
+      <widthRatio>0.490118577075099</widthRatio>
+    </control>
+    <control type="Button" pathname="/divRoot/button1">
+      <backgroundSkin>TCloud000</backgroundSkin>
+      <backgroundSkin1>LRBtn7</backgroundSkin1>
+      <backgroundSkin2>LRBtn7</backgroundSkin2>
+      <cursor>pointer</cursor>
+      <fontColor>FFFFFF</fontColor>
+      <fontColor1>FFFFFF</fontColor1>
+      <fontColor2>FFFFFF</fontColor2>
+      <height>34</height>
+      <heightRatio>0.0416666666666667</heightRatio>
+      <left>109</left>
+      <leftRatio>0.0861660079051383</leftRatio>
+      <onClick>Preview();</onClick>
+      <sizeRatio>0.276422764227642</sizeRatio>
+      <text>preview</text>
+      <top>122</top>
+      <topRatio>0.149509803921569</topRatio>
+      <width>123</width>
+      <widthRatio>0.0972332015810277</widthRatio>
+    </control>
+    <control type="Button" pathname="/divRoot/button3">
+      <backgroundSkin>TCloud000</backgroundSkin>
+      <backgroundSkin1>LRBtn7</backgroundSkin1>
+      <backgroundSkin2>LRBtn7</backgroundSkin2>
+      <cursor>pointer</cursor>
+      <fontColor>FFFFFF</fontColor>
+      <fontColor1>FFFFFF</fontColor1>
+      <fontColor2>FFFFFF</fontColor2>
+      <height>34</height>
+      <heightRatio>0.0416666666666667</heightRatio>
+      <left>109</left>
+      <leftRatio>0.0861660079051383</leftRatio>
+      <onClick>Design();</onClick>
+      <sizeRatio>0.276422764227642</sizeRatio>
+      <text>design</text>
+      <top>163</top>
+      <topRatio>0.199754901960784</topRatio>
+      <width>123</width>
+      <widthRatio>0.0972332015810277</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel2">
+      <backgroundImg>CPY0000.jpg</backgroundImg>
+      <backgroundImgMode>fill</backgroundImgMode>
+      <height>96</height>
+      <heightRatio>0.117647058823529</heightRatio>
+      <left>16</left>
+      <leftRatio>0.0126482213438735</leftRatio>
+      <sizeRatio>0.551724137931034</sizeRatio>
+      <top>264</top>
+      <topRatio>0.323529411764706</topRatio>
+      <width>174</width>
+      <widthRatio>0.137549407114625</widthRatio>
+    </control>
+    <control type="Button" pathname="/divRoot/button4">
+      <backgroundSkin>TCloud000</backgroundSkin>
+      <backgroundSkin1>LRBtn7</backgroundSkin1>
+      <backgroundSkin2>LRBtn7</backgroundSkin2>
+      <cursor>pointer</cursor>
+      <fontColor>FFFFFF</fontColor>
+      <fontColor1>FFFFFF</fontColor1>
+      <fontColor2>FFFFFF</fontColor2>
+      <height>34</height>
+      <heightRatio>0.0416666666666667</heightRatio>
+      <left>109</left>
+      <leftRatio>0.0861660079051383</leftRatio>
+      <onClick>print();</onClick>
+      <sizeRatio>0.276422764227642</sizeRatio>
+      <text>print</text>
+      <top>205</top>
+      <topRatio>0.251225490196078</topRatio>
+      <width>123</width>
+      <widthRatio>0.0972332015810277</widthRatio>
+    </control>
+  </controls>
+  <taskSet count="1">
+    <taskSetItem name="commitOrder">
+      <script1 />
+      <script2>var eBusinessID = "1291311";
+//电商加密私钥，快递鸟提供，注意保管，不要泄漏
+var appKey = "4967ab4b-d377-4ef8-8e28-8e13bcb0ed55";
+//请求url
+//正式环境地址
+// private string ReqURL = "http://api.kdniao.cc/api/Eorderservice";
+//测试环境地址
+var url = "http://testapi.kdniao.cc:8081/api/EOrderService";
+
+var requestData = 
+    "{'OrderCode': '012657900222'," +
+    "'ShipperCode':'SF'," +
+    "'PayType':1," +
+    "'ExpType':1," +
+    "'Cost':1.0," +
+    "'OtherCost':1.0," +
+    "'Sender':" +
+    "{" +
+    "'Company':'LV','Name':'Taylor','Mobile':'15018442396','ProvinceName':'上海','CityName':'上海','ExpAreaName':'青浦区','Address':'明珠路73号'}," +
+    "'Receiver':" +
+    "{" +
+    "'Company':'GCCUI','Name':'Yann','Mobile':'15018442396','ProvinceName':'北京','CityName':'北京','ExpAreaName':'朝阳区','Address':'三里屯街道雅秀大厦'}," +
+    "'Commodity':" +
+    "[{" +
+    "'GoodsName':'鞋子','Goodsquantity':1,'GoodsWeight':1.0}]," +
+    "'Weight':1.0," +
+    "'Quantity':1," +
+    "'Volume':0.0," +
+    "'Remark':'小心轻放'," +
+    "'IsReturnPrintTemplate':1}";
+
+es.setEncoding("utf-8");
+var dataSign = es.getBase64(es.getMd5(requestData + appKey).toLowerCase());
+
+var param =
+    "RequestData=" + es.urlEncode(requestData) +
+    "&amp;EBusinessID=" + eBusinessID +
+    "&amp;RequestType=" + "1007" +
+    "&amp;DataSign=" + es.urlEncode(dataSign) +
+    "&amp;DataType=" + "2";    
+var result = es.post(url, param);
+eio.appendString16(result);
+    
+</script2>
+      <script3><![CDATA[var r = eio.readString16();
+ee.setText(ee.getControl("panel1"), r);
+//结果分析
+g5.getResult = function(buff, param) {
+    var r = buff.indexOf(param);
+    if (r < 0) return "";
+    r = buff.indexOf("\"", r);
+    if (r < 0) return "";
+    r = buff.indexOf("\"", r + 1);
+    if (r < 0) return "";
+    r ++;
+    var r1 = buff.indexOf("\"", r);
+    if (r1 < 0) return;
+    return buff.substring(r, r1);
+}
+/*
+ "EBusinessID": "1291311",
+  "Success": false,
+  "UniquerRequestNumber": "b4dd6914-3fdc-4166-b6d5-60a43a7f4cb7",
+  "Order": {
+    "OrderCode": "012657700222",
+    "LogisticCode": "444835526821",
+    "OriginCode": "021",
+    "DestinatioCode": "010",
+    "KDNOrderCode": "KDN170609173214072292"
+  },
+  "Reason": "该订单号已下单成功",
+  "ResultCode": "105",
+  "PrintTemplate":
+  
+  "Reason": "成功",
+  "ResultCode": "100", 
+*/
+
+g5.eBusinessId = g5.getResult(r, "EBusinessID");
+g5.uniquerRequestNumber = g5.getResult(r, "UniquerRequestNumber");
+g5.orderCode = g5.getResult(r, "OrderCode");
+g5.logisticCode = g5.getResult(r, "LogisticCode");
+g5.originCode = g5.getResult(r, "OriginCode");
+g5.destinatioCode = g5.getResult(r, "DestinatioCode");
+g5.kDNOrderCode = g5.getResult(r, "KDNOrderCode");
+g5.reason = g5.getResult(r, "Reason");
+g5.resultCode = g5.getResult(r, "ResultCode");
+
+]]></script3>
+    </taskSetItem>
+  </taskSet>
+  <gridLines count="0" />
+</page>

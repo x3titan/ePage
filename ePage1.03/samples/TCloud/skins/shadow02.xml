@@ -1,0 +1,16 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>阴影大范围淡色</displayName>
+  <resizableArea>
+    <left>96</left>
+    <top>61</top>
+    <width>3</width>
+    <height>2</height>
+  </resizableArea>
+  <clientArea>
+    <left>46</left>
+    <top>38</top>
+    <width>100</width>
+    <height>45</height>
+  </clientArea>
+</skin>

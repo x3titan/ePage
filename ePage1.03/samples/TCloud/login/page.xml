@@ -1,0 +1,387 @@
+<page>
+  <controls count="16">
+    <control type="DivRoot" pathname="/divRoot">
+      <backgroundColor>DCDCDC</backgroundColor>
+      <backgroundImg>1_1920x1080.jpg</backgroundImg>
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <height>816</height>
+      <left>0</left>
+      <onControlLoad>//onControlLoad
+/*onkeydown=function (e) {
+    if(e.keyCode==13)login();
+} */
+
+
+setTimeout(function() {
+    g5.token = eb.getCookie("loginToken");
+    if (g5.token!=null) {
+        loginToken();
+    }
+}, 500);
+
+setTimeout(function(){
+    ee.autoResize = false;
+},1000);
+</onControlLoad>
+      <pageTitle>TCloud云订单管理系统登录</pageTitle>
+      <top>0</top>
+      <width>1326</width>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel8">
+      <backgroundImg>bg11.jpg</backgroundImg>
+      <backgroundImgMode>stretch</backgroundImgMode>
+      <dockX>fill</dockX>
+      <dockY>center</dockY>
+      <height>90</height>
+      <heightRatio>0.110294117647059</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.0688599846977812</sizeRatio>
+      <top>363</top>
+      <topRatio>0.444852941176471</topRatio>
+      <width>1326</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel5">
+      <dockX>center</dockX>
+      <dockY>center</dockY>
+      <height>448</height>
+      <heightRatio>0.549019607843137</heightRatio>
+      <left>190</left>
+      <leftRatio>0.137719969395562</leftRatio>
+      <sizeRatio>0.473572938689218</sizeRatio>
+      <top>184</top>
+      <topRatio>0.225490196078431</topRatio>
+      <width>946</width>
+      <widthRatio>0.723794950267789</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel5/panel9">
+      <backgroundColor>DCDCDC</backgroundColor>
+      <fontBold>true</fontBold>
+      <fontColor>008080</fontColor>
+      <fontFamily>黑体</fontFamily>
+      <fontSize>22</fontSize>
+      <height>39</height>
+      <heightRatio>0.0870535714285714</heightRatio>
+      <left>64</left>
+      <leftRatio>0.0676532769556025</leftRatio>
+      <outerTop>200</outerTop>
+      <sizeRatio>0.10655737704918</sizeRatio>
+      <text>TCloud商品电销平台</text>
+      <top>194</top>
+      <topRatio>0.433035714285714</topRatio>
+      <width>366</width>
+      <widthRatio>0.386892177589852</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel5/panel7">
+      <backgroundColor>FFFFFF</backgroundColor>
+      <backgroundImgMode>center</backgroundImgMode>
+      <backgroundSkin>button3a000</backgroundSkin>
+      <height>221</height>
+      <heightRatio>0.493303571428571</heightRatio>
+      <left>492</left>
+      <leftRatio>0.520084566596195</leftRatio>
+      <sizeRatio>0.508045977011494</sizeRatio>
+      <top>106</top>
+      <topRatio>0.236607142857143</topRatio>
+      <width>435</width>
+      <widthRatio>0.459830866807611</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel5/panel7/panel3">
+      <fontBold>true</fontBold>
+      <fontSize>12</fontSize>
+      <hAlign>right</hAlign>
+      <height>21</height>
+      <heightRatio>0.0950226244343891</heightRatio>
+      <left>24</left>
+      <leftRatio>0.0551724137931034</leftRatio>
+      <sizeRatio>0.228260869565217</sizeRatio>
+      <text>帐号/手机</text>
+      <top>42</top>
+      <topRatio>0.190045248868778</topRatio>
+      <width>92</width>
+      <widthRatio>0.211494252873563</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel5/panel7/panel2">
+      <fontBold>true</fontBold>
+      <fontSize>12</fontSize>
+      <hAlign>right</hAlign>
+      <height>21</height>
+      <heightRatio>0.0950226244343891</heightRatio>
+      <left>24</left>
+      <leftRatio>0.0551724137931034</leftRatio>
+      <sizeRatio>0.228260869565217</sizeRatio>
+      <text>密　码</text>
+      <top>85</top>
+      <topRatio>0.384615384615385</topRatio>
+      <width>92</width>
+      <widthRatio>0.211494252873563</widthRatio>
+    </control>
+    <control type="Edit" pathname="/divRoot/panel5/panel7/edit1">
+      <backgroundSkin>edit1</backgroundSkin>
+      <height>30</height>
+      <heightRatio>0.135746606334842</heightRatio>
+      <left>127</left>
+      <leftRatio>0.291954022988506</leftRatio>
+      <sizeRatio>0.114942528735632</sizeRatio>
+      <top>36</top>
+      <topRatio>0.16289592760181</topRatio>
+      <width>261</width>
+      <widthRatio>0.6</widthRatio>
+    </control>
+    <control type="Edit" pathname="/divRoot/panel5/panel7/edit2">
+      <backgroundSkin>edit1</backgroundSkin>
+      <height>30</height>
+      <heightRatio>0.135746606334842</heightRatio>
+      <inputPassword>true</inputPassword>
+      <left>127</left>
+      <leftRatio>0.291954022988506</leftRatio>
+      <sizeRatio>0.114942528735632</sizeRatio>
+      <top>80</top>
+      <topRatio>0.361990950226244</topRatio>
+      <width>261</width>
+      <widthRatio>0.6</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel5/panel7/panel4">
+      <backgroundSkin>LRBtn7</backgroundSkin>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <height>37</height>
+      <heightRatio>0.167420814479638</heightRatio>
+      <left>260</left>
+      <leftRatio>0.597701149425287</leftRatio>
+      <onClick>login();</onClick>
+      <sizeRatio>0.2890625</sizeRatio>
+      <text><![CDATA[登 录 >>]]></text>
+      <top>138</top>
+      <topRatio>0.624434389140272</topRatio>
+      <width>128</width>
+      <widthRatio>0.294252873563218</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel5/panel7/panel1">
+      <backgroundSkin>ProjectAdmin001</backgroundSkin>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <height>37</height>
+      <heightRatio>0.167420814479638</heightRatio>
+      <left>118</left>
+      <leftRatio>0.271264367816092</leftRatio>
+      <onClick>ee.setEditText(ee.getControl("edit1"),"");
+ee.setEditText(ee.getControl("edit2"),"");
+
+</onClick>
+      <sizeRatio>0.2890625</sizeRatio>
+      <text>重 置</text>
+      <top>138</top>
+      <topRatio>0.624434389140272</topRatio>
+      <width>128</width>
+      <widthRatio>0.294252873563218</widthRatio>
+    </control>
+    <control type="CheckBox" pathname="/divRoot/panel5/panel7/checkbox1">
+      <backgroundImg>c1.png</backgroundImg>
+      <backgroundImg1>c2.png</backgroundImg1>
+      <backgroundImgMode>fill</backgroundImgMode>
+      <backgroundImgMode1>fill</backgroundImgMode1>
+      <cursor>pointer</cursor>
+      <height>29</height>
+      <heightRatio>0.131221719457014</heightRatio>
+      <left>5</left>
+      <leftRatio>0.0114942528735632</leftRatio>
+      <onValueChange>if (value=="1") {
+    ee.getControl("divRoot").dockX = "disabled";
+    ee.getControl("divRoot").dockY = "disabled";
+    ee.setRect(ee.getControl("divRoot"),0,0,1920,1080);    
+} else {
+    ee.getControl("divRoot").dockX = "fill";
+    ee.getControl("divRoot").dockY = "fill";    
+}
+
+
+
+</onValueChange>
+      <sizeRatio>0.617021276595745</sizeRatio>
+      <top>180</top>
+      <topRatio>0.81447963800905</topRatio>
+      <width>47</width>
+      <widthRatio>0.108045977011494</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel5/panel7/panel12">
+      <bindBottom>bottom</bindBottom>
+      <bindControl>checkbox1</bindControl>
+      <bindLeft>right</bindLeft>
+      <bindTop>top</bindTop>
+      <cursor>pointer</cursor>
+      <hAlign>left</hAlign>
+      <height>29</height>
+      <heightRatio>0.131221719457014</heightRatio>
+      <left>52</left>
+      <leftRatio>0.119540229885057</leftRatio>
+      <onClick>var c = ee.getControl("checkbox1");
+ee.setCheckBoxValue(c, (c.checkValue+1)%2);
+</onClick>
+      <sizeRatio>0.381578947368421</sizeRatio>
+      <text>锁定屏幕</text>
+      <top>180</top>
+      <topRatio>0.81447963800905</topRatio>
+      <width>76</width>
+      <widthRatio>0.174712643678161</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel5/panel6">
+      <fontBold>true</fontBold>
+      <fontColor>008080</fontColor>
+      <height>27</height>
+      <heightRatio>0.0602678571428571</heightRatio>
+      <left>73</left>
+      <leftRatio>0.0771670190274841</leftRatio>
+      <sizeRatio>0.0789473684210526</sizeRatio>
+      <text>源自腾讯气质不凡，本系统由ePage中间件开发</text>
+      <top>230</top>
+      <topRatio>0.513392857142857</topRatio>
+      <width>342</width>
+      <widthRatio>0.361522198731501</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel5/panel10">
+      <backgroundColor>DCDCDC</backgroundColor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>黑体</fontFamily>
+      <fontSize>22</fontSize>
+      <hAlign>left</hAlign>
+      <height>39</height>
+      <heightRatio>0.0870535714285714</heightRatio>
+      <left>11</left>
+      <leftRatio>0.0116279069767442</leftRatio>
+      <outerTop>200</outerTop>
+      <sizeRatio>0.278571428571429</sizeRatio>
+      <text>用户登录</text>
+      <top>139</top>
+      <topRatio>0.310267857142857</topRatio>
+      <width>140</width>
+      <widthRatio>0.147991543340381</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel5/panel11">
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <hAlign>left</hAlign>
+      <height>25</height>
+      <heightRatio>0.0558035714285714</heightRatio>
+      <left>149</left>
+      <leftRatio>0.157505285412262</leftRatio>
+      <sizeRatio>0.260416666666667</sizeRatio>
+      <text>User Login</text>
+      <top>148</top>
+      <topRatio>0.330357142857143</topRatio>
+      <width>96</width>
+      <widthRatio>0.101479915433404</widthRatio>
+    </control>
+  </controls>
+  <taskSet count="2">
+    <taskSetItem name="login">
+      <script1><![CDATA[g5.username = ee.getEditText(ee.getControl("edit1"));
+g5.password = ee.getEditText(ee.getControl("edit2"));
+if (g5.username.length <= 2) {
+    alert("请输入有效的用户名或者手机号码");
+    return;
+}
+eio.appendString8(g5.username);
+eio.appendString8(g5.password);
+
+]]></script1>
+      <script2>var username = eio.readString8();
+var password = eio.readString8();
+var passwordMd5 = es.getMd5(password);
+var sql,sqlResult;  
+
+sql = "exec login '" + db.encode(username) + "'," +
+    "'" + passwordMd5 + "'";
+sqlResult = db.executeQuery("DB", sql);
+if (sqlResult == null) {
+    eio.appendString8("F");
+    eio.appendString8("系统繁忙请稍后再试");
+    return;
+}
+db.read(sqlResult);
+if (db.getInt32(sqlResult, "errorCode")!=0) {
+    eio.appendString8("F");
+    eio.appendString8(db.getString(sqlResult, "errorString"));
+    es.logWarning("用户登录失败,username=" + username + ",password=" + password);
+    return;
+} 
+eio.appendString8("T");
+eio.appendString8(db.getString(sqlResult, "errorString"));
+es.logCommon("用户输入账户密码登录：" + username);
+</script2>
+      <script3>var resultCode=eio.readString8(); 
+if (resultCode=="F") {
+    alert("登录失败：" + eio.readString8());
+    g5.show(1);
+    return;
+}  
+//获取令牌
+eb.setCookie("loginToken", eio.readString8());  
+loginToken();
+
+
+
+</script3>
+    </taskSetItem>
+    <taskSetItem name="loginToken">
+      <script1>g5.token = eb.getCookie("loginToken");
+if (eb.isEmpty(g5.token)) {
+    return;              
+}
+eio.appendString8(g5.token);
+</script1>
+      <script2><![CDATA[var token = eio.readString8();
+var sql,sqlResult;
+sql = "exec getUserInfoBySession '" + db.encode(token) + "'";
+sqlResult = db.executeQuery("DB", sql);
+if (sqlResult == null) {
+    eio.appendString8("F");
+    eio.appendString8("系统繁忙请稍后再试");
+    return;
+}
+db.read(sqlResult);
+if (db.getString(sqlResult, "sessionId").length < 5) {
+    eio.appendString8("F");
+    eio.appendString8("上次登录时间太久或者您更换了系统");
+    es.logCommon("用户token登录失败,token=" + token);
+    return;
+} 
+eio.appendString8("T");
+//eio.appendString8(db.getString(sqlResult, "userType"));
+es.logCommon("用户token登录,userName=" + db.getString(sqlResult,"userName") +
+    ",nickName=" + db.getString(sqlResult, "nickName"));
+
+]]></script2>
+      <script3>if (eio.readString8()!="T") {
+    alert("登录失败："+eio.readString8());
+    //g5.show(1);
+    return;
+}
+
+window.location.href = ee.getUrl("/main");
+
+
+
+//window.location.href=ee.pageRoot + "/main";  
+
+//var userType = eio.readString8();
+//eb.setCookie("pjUserType", userType);
+//window.location.href="http://m.1peijia.com:88/EEngine/ee.aspx?_L_=/App1PJAdmin/login"
+/*if (userType=="教练") {                   
+    window.location.href = ee.pageRoot + "/cMain"; 
+} else {
+    window.location.href = ee.pageRoot + "/student/sMain"; 
+} */
+
+
+</script3>
+    </taskSetItem>
+  </taskSet>
+  <gridLines count="0" />
+</page>

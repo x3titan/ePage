@@ -1,0 +1,18 @@
+<skin>
+  <clipMode>9x</clipMode>
+  <imageType>png</imageType>
+  <displayName>按钮-普通扁平蓝色</displayName>
+  <creator>custom</creator>
+  <resizableArea>
+    <left>4</left>
+    <top>3</top>
+    <width>54</width>
+    <height>23</height>
+  </resizableArea>
+  <clientArea>
+    <left>4</left>
+    <top>3</top>
+    <width>54</width>
+    <height>23</height>
+  </clientArea>
+</skin>

@@ -1,0 +1,16 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>控件专用RichEdit</displayName>
+  <resizableArea>
+    <left>870</left>
+    <top>42</top>
+    <width>16</width>
+    <height>14</height>
+  </resizableArea>
+  <clientArea>
+    <left>870</left>
+    <top>42</top>
+    <width>16</width>
+    <height>14</height>
+  </clientArea>
+</skin>

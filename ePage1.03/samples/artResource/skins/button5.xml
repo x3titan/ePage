@@ -1,0 +1,17 @@
+﻿<skin>
+  <imageType>png</imageType>
+  <displayName>按钮-上圆角白色带阴影</displayName>
+  <creator>谭江天</creator>
+  <resizableArea>
+    <left>34</left>
+    <top>26</top>
+    <width>6</width>
+    <height>6</height>
+  </resizableArea>
+  <clientArea>
+    <left>16</left>
+    <top>10</top>
+    <width>35</width>
+    <height>22</height>
+  </clientArea>
+</skin>

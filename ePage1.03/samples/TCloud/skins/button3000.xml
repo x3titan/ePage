@@ -1,0 +1,17 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>按钮-小圆角小阴影无边蓝色</displayName>
+  <creator>custom</creator>
+  <resizableArea>
+    <left>11</left>
+    <top>9</top>
+    <width>3</width>
+    <height>3</height>
+  </resizableArea>
+  <clientArea>
+    <left>5</left>
+    <top>3</top>
+    <width>15</width>
+    <height>15</height>
+  </clientArea>
+</skin>

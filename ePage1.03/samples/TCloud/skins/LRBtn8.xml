@@ -1,0 +1,18 @@
+<skin>
+    <clipMode>LR3x</clipMode>
+    <imageType>png</imageType>
+    <displayName>白色下拉框</displayName>
+    <creator>custom</creator>
+    <resizableArea>
+        <left>11</left>
+        <top>0</top>
+        <width>186</width>
+        <height>40</height>
+    </resizableArea>
+    <clientArea>
+        <left>11</left>
+        <top>7</top>
+        <width>186</width>
+        <height>26</height>
+    </clientArea>
+</skin>

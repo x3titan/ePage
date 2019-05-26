@@ -1,0 +1,16 @@
+<skin>
+    <imageType>png</imageType>
+    <displayName>输入框白色</displayName>
+    <resizableArea>
+        <left>7</left>
+        <top>7</top>
+        <width>32</width>
+        <height>25</height>
+    </resizableArea>
+    <clientArea>
+        <left>7</left>
+        <top>7</top>
+        <width>32</width>
+        <height>25</height>
+    </clientArea>
+</skin>

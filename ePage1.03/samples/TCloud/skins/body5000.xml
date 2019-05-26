@@ -1,0 +1,17 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>窗体-小圆角白色带阴影</displayName>
+  <creator>custom</creator>
+  <resizableArea>
+    <left>24</left>
+    <top>22</top>
+    <width>15</width>
+    <height>16</height>
+  </resizableArea>
+  <clientArea>
+    <left>19</left>
+    <top>15</top>
+    <width>25</width>
+    <height>30</height>
+  </clientArea>
+</skin>

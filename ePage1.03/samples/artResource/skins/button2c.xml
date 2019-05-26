@@ -1,0 +1,16 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>按钮-圆角按钮组未选中右</displayName>
+  <resizableArea>
+    <left>2</left>
+    <top>8</top>
+    <width>1</width>
+    <height>1</height>
+  </resizableArea>
+  <clientArea>
+    <left>3</left>
+    <top>4</top>
+    <width>1</width>
+    <height>9</height>
+  </clientArea>
+</skin>

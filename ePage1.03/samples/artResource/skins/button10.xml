@@ -1,0 +1,17 @@
+﻿<skin>
+  <imageType>png</imageType>
+  <displayName>按钮-蓝色扁平凹面</displayName>
+  <creator>custom</creator>
+  <resizableArea>
+    <left>4</left>
+    <top>4</top>
+    <width>111</width>
+    <height>22</height>
+  </resizableArea>
+  <clientArea>
+      <left>4</left>
+      <top>4</top>
+      <width>111</width>
+      <height>22</height>
+  </clientArea>
+</skin>

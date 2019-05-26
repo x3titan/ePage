@@ -1,0 +1,16 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>窗体大型162k</displayName>
+  <resizableArea>
+    <left>71</left>
+    <top>141</top>
+    <width>577</width>
+    <height>248</height>
+  </resizableArea>
+  <clientArea>
+    <left>54</left>
+    <top>141</top>
+    <width>607</width>
+    <height>248</height>
+  </clientArea>
+</skin>

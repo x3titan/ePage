@@ -1,0 +1,17 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>按钮-圆角按钮组选中左右中</displayName>
+  <creator>custom</creator>
+  <resizableArea>
+    <left>1</left>
+    <top>2</top>
+    <width>7</width>
+    <height>13</height>
+  </resizableArea>
+  <clientArea>
+    <left>3</left>
+    <top>4</top>
+    <width>3</width>
+    <height>9</height>
+  </clientArea>
+</skin>

@@ -1,0 +1,16 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>阴影中型</displayName>
+  <resizableArea>
+    <left>33</left>
+    <top>28</top>
+    <width>2</width>
+    <height>2</height>
+  </resizableArea>
+  <clientArea>
+    <left>19</left>
+    <top>19</top>
+    <width>30</width>
+    <height>23</height>
+  </clientArea>
+</skin>

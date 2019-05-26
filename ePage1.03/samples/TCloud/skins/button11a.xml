@@ -1,0 +1,17 @@
+﻿<skin>
+  <imageType>png</imageType>
+  <displayName>按钮-白色风格压下</displayName>
+  <creator>custom</creator>
+  <resizableArea>
+    <left>10</left>
+    <top>9</top>
+    <width>58</width>
+    <height>18</height>
+  </resizableArea>
+  <clientArea>
+      <left>10</left>
+      <top>9</top>
+      <width>60</width>
+      <height>20</height>
+  </clientArea>
+</skin>

@@ -1,0 +1,16 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>Android蓝色风格外框</displayName>
+  <resizableArea>
+    <left>17</left>
+    <top>17</top>
+    <width>23</width>
+    <height>23</height>
+  </resizableArea>
+  <clientArea>
+    <left>17</left>
+    <top>17</top>
+    <width>23</width>
+    <height>23</height>
+  </clientArea>
+</skin>

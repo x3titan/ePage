@@ -1,0 +1,16 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>绿色渐变1</displayName>
+  <resizableArea>
+    <left>4</left>
+    <top>4</top>
+    <width>128</width>
+    <height>29</height>
+  </resizableArea>
+  <clientArea>
+    <left>4</left>
+    <top>4</top>
+    <width>128</width>
+    <height>29</height>
+  </clientArea>
+</skin>

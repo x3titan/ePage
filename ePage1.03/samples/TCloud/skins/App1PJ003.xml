@@ -1,0 +1,18 @@
+<skin>
+  <clipMode>9x</clipMode>
+  <imageType>png</imageType>
+  <displayName>按钮-苹果下载蓝色</displayName>
+  <creator>custom</creator>
+  <resizableArea>
+    <left>15</left>
+    <top>12</top>
+    <width>37</width>
+    <height>70</height>
+  </resizableArea>
+  <clientArea>
+    <left>15</left>
+    <top>12</top>
+    <width>37</width>
+    <height>70</height>
+  </clientArea>
+</skin>

@@ -1,0 +1,16 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>线框-小圆角2线宽蓝色</displayName>
+  <resizableArea>
+    <left>7</left>
+    <top>7</top>
+    <width>23</width>
+    <height>21</height>
+  </resizableArea>
+  <clientArea>
+    <left>5</left>
+    <top>5</top>
+    <width>27</width>
+    <height>25</height>
+  </clientArea>
+</skin>

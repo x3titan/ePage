@@ -1,0 +1,16 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>窗体-直角阴影白</displayName>
+  <resizableArea>
+    <left>35</left>
+    <top>14</top>
+    <width>14</width>
+    <height>10</height>
+  </resizableArea>
+  <clientArea>
+    <left>24</left>
+    <top>7</top>
+    <width>36</width>
+    <height>25</height>
+  </clientArea>
+</skin>

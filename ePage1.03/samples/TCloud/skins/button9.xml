@@ -1,0 +1,17 @@
+﻿<skin>
+  <imageType>png</imageType>
+  <displayName>按钮-绿色扁平方</displayName>
+  <creator>custom</creator>
+  <resizableArea>
+    <left>4</left>
+    <top>5</top>
+    <width>113</width>
+    <height>22</height>
+  </resizableArea>
+  <clientArea>
+      <left>4</left>
+      <top>5</top>
+      <width>113</width>
+      <height>22</height>
+  </clientArea>
+</skin>

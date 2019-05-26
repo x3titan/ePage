@@ -1,0 +1,17 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>半透明的输入框</displayName>
+  <creator>custom</creator>
+  <resizableArea>
+    <left>4</left>
+    <top>4</top>
+    <width>9</width>
+    <height>26</height>
+  </resizableArea>
+  <clientArea>
+    <left>4</left>
+    <top>2</top>
+    <width>6</width>
+    <height>27</height>
+  </clientArea>
+</skin>

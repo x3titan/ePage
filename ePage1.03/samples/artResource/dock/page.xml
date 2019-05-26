@@ -1,0 +1,318 @@
+<page>
+  <controls count="19">
+    <control type="DivRoot" pathname="/divRoot">
+      <backgroundColor>ffffff</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <height>816</height>
+      <left>0</left>
+      <top>0</top>
+      <width>1306</width>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel1">
+      <backgroundColor>8080FF</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <fontColor>FFFFFF</fontColor>
+      <height>716</height>
+      <heightRatio>0.877450980392157</heightRatio>
+      <left>50</left>
+      <leftRatio>0.0375191424196018</leftRatio>
+      <outerBottom>50</outerBottom>
+      <outerLeft>50</outerLeft>
+      <outerRight>50</outerRight>
+      <outerTop>50</outerTop>
+      <sizeRatio>0.593698175787728</sizeRatio>
+      <text>dockX:fill
+dockY:fill
+outerLeft:50
+outerRight:50
+outerBottom:50
+outerTop:50
+
+请拖动浏览器大小观看效果</text>
+      <top>50</top>
+      <topRatio>0.0612745098039216</topRatio>
+      <width>1206</width>
+      <widthRatio>0.923430321592649</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel1/panel13">
+      <backgroundColor>800080</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockX>right</dockX>
+      <fontColor>FFFFFF</fontColor>
+      <height>79</height>
+      <heightRatio>0.110335195530726</heightRatio>
+      <left>995</left>
+      <leftRatio>0.825041459369818</leftRatio>
+      <sizeRatio>0.374407582938389</sizeRatio>
+      <text>dockX:right
+
+dockX可将控
+件粘滞在右侧</text>
+      <top>48</top>
+      <topRatio>0.0670391061452514</topRatio>
+      <width>211</width>
+      <widthRatio>0.174958540630182</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel1/panel14">
+      <backgroundColor>800080</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockX>right</dockX>
+      <fontColor>FFFFFF</fontColor>
+      <height>137</height>
+      <heightRatio>0.191340782122905</heightRatio>
+      <left>945</left>
+      <leftRatio>0.783582089552239</leftRatio>
+      <outerRight>50</outerRight>
+      <sizeRatio>0.649289099526066</sizeRatio>
+      <text>dockX:right
+outerRight:50
+
+
+outer属性可以在粘
+滞的同时留出缝隙</text>
+      <top>159</top>
+      <topRatio>0.222067039106145</topRatio>
+      <width>211</width>
+      <widthRatio>0.174958540630182</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel1/panel15">
+      <backgroundColor>0000C0</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockY>bottom</dockY>
+      <fontColor>FFFFFF</fontColor>
+      <height>164</height>
+      <heightRatio>0.229050279329609</heightRatio>
+      <left>118</left>
+      <leftRatio>0.0978441127694859</leftRatio>
+      <sizeRatio>0.987951807228916</sizeRatio>
+      <text>dockY:bottom
+
+dockY可将控
+件粘滞在底部</text>
+      <top>552</top>
+      <topRatio>0.770949720670391</topRatio>
+      <width>166</width>
+      <widthRatio>0.137645107794362</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel1/panel16">
+      <backgroundColor>0000C0</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockY>bottom</dockY>
+      <fontColor>FFFFFF</fontColor>
+      <height>164</height>
+      <heightRatio>0.229050279329609</heightRatio>
+      <left>349</left>
+      <leftRatio>0.2893864013267</leftRatio>
+      <outerBottom>50</outerBottom>
+      <sizeRatio>0.987951807228916</sizeRatio>
+      <text>dockY:bottom
+outerBottom:50
+
+outer属性可以在粘
+滞的同时留出缝隙</text>
+      <top>502</top>
+      <topRatio>0.701117318435754</topRatio>
+      <width>166</width>
+      <widthRatio>0.137645107794362</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel1/panel17">
+      <backgroundColor>804040</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockX>ratio</dockX>
+      <dockY>ratio</dockY>
+      <fontColor>FFFFFF</fontColor>
+      <height>276</height>
+      <heightRatio>0.385474860335196</heightRatio>
+      <left>61</left>
+      <leftRatio>0.0505804311774461</leftRatio>
+      <sizeRatio>0.775280898876405</sizeRatio>
+      <text>dockX:ratio
+dockY:ratio
+
+ratio模式可以根据父控件的大小
+按照设计时的比例进行缩放</text>
+      <top>48</top>
+      <topRatio>0.0670391061452514</topRatio>
+      <width>356</width>
+      <widthRatio>0.295190713101161</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel2">
+      <dockX>center</dockX>
+      <dockY>top</dockY>
+      <hAlign>right</hAlign>
+      <height>50</height>
+      <heightRatio>0.0612745098039216</heightRatio>
+      <left>611</left>
+      <leftRatio>0.467840735068913</leftRatio>
+      <sizeRatio>0.602409638554217</sizeRatio>
+      <text>50px</text>
+      <top>0</top>
+      <width>83</width>
+      <widthRatio>0.0635528330781011</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel2/panel81">
+      <backgroundImg>onebit_30.png</backgroundImg>
+      <backgroundImgMode>fill</backgroundImgMode>
+      <dockX>center</dockX>
+      <dockY>top</dockY>
+      <height>24</height>
+      <heightRatio>0.48</heightRatio>
+      <left>18</left>
+      <leftRatio>0.216867469879518</leftRatio>
+      <sizeRatio>0.521739130434783</sizeRatio>
+      <top>0</top>
+      <width>46</width>
+      <widthRatio>0.55421686746988</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel2/panel3">
+      <backgroundImg>onebit_28.png</backgroundImg>
+      <backgroundImgMode>fill</backgroundImgMode>
+      <dockX>center</dockX>
+      <dockY>bottom</dockY>
+      <height>24</height>
+      <heightRatio>0.48</heightRatio>
+      <left>18</left>
+      <leftRatio>0.216867469879518</leftRatio>
+      <sizeRatio>0.521739130434783</sizeRatio>
+      <top>26</top>
+      <topRatio>0.56</topRatio>
+      <width>46</width>
+      <widthRatio>0.55421686746988</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel4">
+      <dockX>center</dockX>
+      <dockY>bottom</dockY>
+      <hAlign>right</hAlign>
+      <height>50</height>
+      <heightRatio>0.0612745098039216</heightRatio>
+      <left>611</left>
+      <leftRatio>0.467840735068913</leftRatio>
+      <sizeRatio>0.602409638554217</sizeRatio>
+      <text>50px</text>
+      <top>766</top>
+      <width>83</width>
+      <widthRatio>0.0635528330781011</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel4/panel5">
+      <backgroundImg>onebit_30.png</backgroundImg>
+      <backgroundImgMode>fill</backgroundImgMode>
+      <dockX>center</dockX>
+      <dockY>top</dockY>
+      <height>24</height>
+      <heightRatio>0.48</heightRatio>
+      <left>18</left>
+      <leftRatio>0.216867469879518</leftRatio>
+      <sizeRatio>0.521739130434783</sizeRatio>
+      <top>0</top>
+      <width>46</width>
+      <widthRatio>0.55421686746988</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel4/panel6">
+      <backgroundImg>onebit_28.png</backgroundImg>
+      <backgroundImgMode>fill</backgroundImgMode>
+      <dockX>center</dockX>
+      <dockY>bottom</dockY>
+      <height>24</height>
+      <heightRatio>0.48</heightRatio>
+      <left>18</left>
+      <leftRatio>0.216867469879518</leftRatio>
+      <sizeRatio>0.521739130434783</sizeRatio>
+      <top>26</top>
+      <topRatio>0.56</topRatio>
+      <width>46</width>
+      <widthRatio>0.55421686746988</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel7">
+      <dockX>left</dockX>
+      <dockY>center</dockY>
+      <height>54</height>
+      <heightRatio>0.0661764705882353</heightRatio>
+      <left>0</left>
+      <sizeRatio>1.08</sizeRatio>
+      <text>50px</text>
+      <top>381</top>
+      <topRatio>0.466911764705882</topRatio>
+      <vAlign>top</vAlign>
+      <width>50</width>
+      <widthRatio>0.0382848392036753</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel7/panel8">
+      <backgroundImg>onebit_29.png</backgroundImg>
+      <backgroundImgMode>fill</backgroundImgMode>
+      <dockX>left</dockX>
+      <dockY>center</dockY>
+      <height>44</height>
+      <heightRatio>0.385964912280702</heightRatio>
+      <left>0</left>
+      <sizeRatio>1.83333333333333</sizeRatio>
+      <top>5</top>
+      <topRatio>0.307017543859649</topRatio>
+      <width>24</width>
+      <widthRatio>0.48</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel7/panel9">
+      <backgroundImg>onebit_27.png</backgroundImg>
+      <backgroundImgMode>fill</backgroundImgMode>
+      <dockX>right</dockX>
+      <dockY>center</dockY>
+      <height>44</height>
+      <heightRatio>0.385964912280702</heightRatio>
+      <left>26</left>
+      <leftRatio>0.52</leftRatio>
+      <sizeRatio>1.83333333333333</sizeRatio>
+      <top>5</top>
+      <topRatio>0.307017543859649</topRatio>
+      <width>24</width>
+      <widthRatio>0.48</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel10">
+      <dockX>right</dockX>
+      <dockY>center</dockY>
+      <height>54</height>
+      <heightRatio>0.0661764705882353</heightRatio>
+      <left>1256</left>
+      <sizeRatio>1.08</sizeRatio>
+      <text>50px</text>
+      <top>381</top>
+      <topRatio>0.466911764705882</topRatio>
+      <vAlign>top</vAlign>
+      <width>50</width>
+      <widthRatio>0.0382848392036753</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel10/panel11">
+      <backgroundImg>onebit_29.png</backgroundImg>
+      <backgroundImgMode>fill</backgroundImgMode>
+      <dockX>left</dockX>
+      <dockY>center</dockY>
+      <height>44</height>
+      <heightRatio>0.385964912280702</heightRatio>
+      <left>0</left>
+      <sizeRatio>1.83333333333333</sizeRatio>
+      <top>5</top>
+      <topRatio>0.307017543859649</topRatio>
+      <width>24</width>
+      <widthRatio>0.48</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel10/panel12">
+      <backgroundImg>onebit_27.png</backgroundImg>
+      <backgroundImgMode>fill</backgroundImgMode>
+      <dockX>right</dockX>
+      <dockY>center</dockY>
+      <height>44</height>
+      <heightRatio>0.385964912280702</heightRatio>
+      <left>26</left>
+      <leftRatio>0.52</leftRatio>
+      <sizeRatio>1.83333333333333</sizeRatio>
+      <top>5</top>
+      <topRatio>0.307017543859649</topRatio>
+      <width>24</width>
+      <widthRatio>0.48</widthRatio>
+    </control>
+  </controls>
+  <taskSet count="0" />
+  <gridLines count="0" />
+</page>

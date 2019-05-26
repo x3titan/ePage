@@ -1,0 +1,16 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>单线框蓝色</displayName>
+  <resizableArea>
+    <left>3</left>
+    <top>3</top>
+    <width>15</width>
+    <height>7</height>
+  </resizableArea>
+  <clientArea>
+    <left>3</left>
+    <top>3</top>
+    <width>15</width>
+    <height>7</height>
+  </clientArea>
+</skin>

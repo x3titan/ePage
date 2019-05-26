@@ -1,0 +1,17 @@
+﻿<skin>
+  <imageType>png</imageType>
+  <displayName>按钮-无框圆角</displayName>
+  <creator>custom</creator>
+  <resizableArea>
+    <left>16</left>
+    <top>16</top>
+    <width>4</width>
+    <height>4</height>
+  </resizableArea>
+  <clientArea>
+    <left>17</left>
+    <top>2</top>
+    <width>4</width>
+    <height>32</height>
+  </clientArea>
+</skin>

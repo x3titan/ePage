@@ -1,0 +1,445 @@
+<page>
+  <controls count="13">
+    <control type="DivRoot" pathname="/divRoot">
+      <backgroundColor>ffffff</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <height>816</height>
+      <left>0</left>
+      <onControlLoad><![CDATA[g5.chartOption = {
+    title: {
+        text: "新增订单按小时和推广链接入口统计"
+    },
+    tooltip : {
+        trigger: "axis",
+        axisPointer: {
+            type: "cross",
+            label: {
+                backgroundColor: "#6a7985"
+            }
+        }
+    },
+    legend: {
+        data:["邮件营销","联盟广告","视频广告","直接访问","搜索引擎"]
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    grid: {
+        left: "3%",
+        right: "4%",
+        bottom: "3%",
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : "category",
+            boundaryGap : false,
+            data : ["0点","1点","2点","3点","4点","5点"],
+            axisLabel: {
+                formatter: "{value}点"
+            }
+        }
+    ],
+    yAxis : [
+        {
+            type : "value",
+            axisLabel: {
+                formatter: "{value}个"
+            }
+        },
+    ],
+    series : [
+        {
+            name:"邮件营销",
+            type:"line",
+            stack: "总量",
+            areaStyle: {normal: {}},
+            data:[120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+            name:"联盟广告",
+            type:"line",
+            stack: "总量",
+            areaStyle: {normal: {}},
+            data:[220, 182, 191, 234, 290, 330, 310]
+        },
+        {
+            name:"视频广告",
+            type:"line",
+            stack: "总量",
+            areaStyle: {normal: {}},
+            data:[150, 232, 201, 154, 190, 330, 410]
+        },
+        {
+            name:"直接访问",
+            type:"line",
+            stack: "总量",
+            areaStyle: {normal: {}},
+            data:[320, 332, 301, 334, 390, 330, 320]
+        },
+        {
+            name:"搜索引擎",
+            type:"line",
+            stack: "总量",
+            label: {
+                normal: {
+                    show: true,
+                    position: "top"
+                }
+            },
+            areaStyle: {normal: {}},
+            data:[820, 932, 901, 934, 1290, 1330, 1320]
+        }
+    ]
+}; 
+
+g5.refresh = function() {
+    var i,j, dIndex = -1, lastName = "", name;
+    g5.dataset = new Array();
+    //format data
+    for (i =0 ; i < g5.dataset1.rowCount; i++) {
+        name = g5.dataset1.getData(0,i) + "(" + g5.dataset1.getData(1,i) + ")";
+        if (name != lastName) {
+            dIndex ++;
+            lastName = name;
+            g5.dataset[dIndex] = new Array();
+            g5.dataset[dIndex].name = name;
+            for (j = 0; j < 24; j++) {
+                g5.dataset[dIndex].push(0);
+            }
+        }
+        g5.dataset[dIndex][parseInt(g5.dataset1.getData(4,i))] = parseInt(g5.dataset1.getData(5,i));
+    }
+    //fill data
+    g5.chartOption.xAxis[0].data = new Array();
+    g5.chartOption.xAxis[0].data.push(" ");
+    for (i = 0; i < 24; i++) {
+        g5.chartOption.xAxis[0].data.push(i);
+    }
+    g5.chartOption.legend.data = new Array();
+    g5.chartOption.series = new Array();
+    for (i = 0; i < g5.dataset.length; i++) {
+        g5.chartOption.legend.data.push(g5.dataset[i].name);
+        g5.chartOption.series[i] = {};
+        g5.chartOption.series[i].name = g5.dataset[i].name;
+        if (g5.chartLine) {
+            g5.chartOption.series[i].type = "line";
+        } else {
+            g5.chartOption.series[i].type = "bar";
+        }
+        if (g5.chartStack) {
+            g5.chartOption.series[i].stack = "总量"; //是否堆叠显示
+        }
+        g5.chartOption.series[i].areaStyle = {normal: {}};
+        g5.chartOption.series[i].data = new Array();
+        g5.chartOption.series[i].data.push(0);
+        for (j = 0; j < g5.dataset[i].length; j++) {
+            g5.chartOption.series[i].data.push(g5.dataset[i][j]);
+        }
+    }
+    
+    g5.chart = echarts.init(ee.getControl("panel11"));
+    g5.chart.setOption(g5.chartOption);
+}
+
+ee.setText(ee.getControl("panel21"), (new Date()).format("yyyy-MM-dd"));
+g5.chartStack = true; //是否堆叠显示
+g5.chartLine = false; //是否折线图显示
+
+query();
+
+       
+]]></onControlLoad>
+      <onPageCreate>//日期时间格式化控件
+Date.prototype.format = function(fmt) { 
+     var o = { 
+        "M+" : this.getMonth()+1,                 //月份 
+        "d+" : this.getDate(),                    //日 
+        "h+" : this.getHours(),                   //小时 
+        "m+" : this.getMinutes(),                 //分 
+        "s+" : this.getSeconds(),                 //秒 
+        "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+        "S"  : this.getMilliseconds()             //毫秒 
+    }; 
+    if(/(y+)/.test(fmt)) {
+            fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+    }
+     for(var k in o) {
+        if(new RegExp("("+ k +")").test(fmt)){
+             fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+         }
+     }
+    return fmt; 
+}        </onPageCreate>
+      <pageHead><![CDATA[<script src="Scripts/laydate.js"></script>
+<script src="Scripts/eCharts/echarts.min.js"></script>]]></pageHead>
+      <top>0</top>
+      <width>1306</width>
+    </control>
+    <control type="LayoutY" pathname="/divRoot/layouty1">
+      <backgroundColor>000000</backgroundColor>
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <height>816</height>
+      <heightRatio>1</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.624808575803982</sizeRatio>
+      <top>0</top>
+      <width>1306</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem1">
+      <backgroundColor>FFFFFF</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <heavyEnabled>false</heavyEnabled>
+      <height>75</height>
+      <heightRatio>0.0919117647058824</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.057427258805513</sizeRatio>
+      <top>0</top>
+      <width>1306</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/layouty1/layoutyitem1/panel21">
+      <backgroundSkin>edit2</backgroundSkin>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>198DC9</fontColor>
+      <height>34</height>
+      <heightRatio>0.453333333333333</heightRatio>
+      <left>347</left>
+      <leftRatio>0.265696784073507</leftRatio>
+      <onClick>laydate({choose: function() {
+    query();
+}});</onClick>
+      <sizeRatio>0.323809523809524</sizeRatio>
+      <text>选择日期</text>
+      <top>23</top>
+      <topRatio>0.306666666666667</topRatio>
+      <width>105</width>
+      <widthRatio>0.0803981623277182</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/layouty1/layoutyitem1/panel1">
+      <fontBold>true</fontBold>
+      <fontColor>198DC9</fontColor>
+      <hAlign>left</hAlign>
+      <height>27</height>
+      <heightRatio>0.36</heightRatio>
+      <left>457</left>
+      <leftRatio>0.349923430321593</leftRatio>
+      <sizeRatio>0.152542372881356</sizeRatio>
+      <text><![CDATA[<<<点击选择]]></text>
+      <top>27</top>
+      <topRatio>0.36</topRatio>
+      <width>177</width>
+      <widthRatio>0.135528330781011</widthRatio>
+    </control>
+    <control type="Button" pathname="/divRoot/layouty1/layoutyitem1/button4">
+      <backgroundSkin>TCloud000</backgroundSkin>
+      <backgroundSkin1>LRBtn7</backgroundSkin1>
+      <backgroundSkin2>LRBtn7</backgroundSkin2>
+      <cursor>pointer</cursor>
+      <fontColor>FFFFFF</fontColor>
+      <fontColor1>FFFFFF</fontColor1>
+      <fontColor2>FFFFFF</fontColor2>
+      <height>34</height>
+      <heightRatio>0.453333333333333</heightRatio>
+      <left>31</left>
+      <leftRatio>0.0237366003062787</leftRatio>
+      <onClick>g5.chartStack = !g5.chartStack;
+g5.refresh();
+
+
+
+
+</onClick>
+      <sizeRatio>0.244604316546763</sizeRatio>
+      <text>分列/堆叠</text>
+      <top>23</top>
+      <topRatio>0.306666666666667</topRatio>
+      <width>139</width>
+      <widthRatio>0.106431852986217</widthRatio>
+    </control>
+    <control type="Button" pathname="/divRoot/layouty1/layoutyitem1/button1">
+      <backgroundSkin>TCloud000</backgroundSkin>
+      <backgroundSkin1>LRBtn7</backgroundSkin1>
+      <backgroundSkin2>LRBtn7</backgroundSkin2>
+      <cursor>pointer</cursor>
+      <fontColor>FFFFFF</fontColor>
+      <fontColor1>FFFFFF</fontColor1>
+      <fontColor2>FFFFFF</fontColor2>
+      <height>34</height>
+      <heightRatio>0.453333333333333</heightRatio>
+      <left>185</left>
+      <leftRatio>0.141653905053599</leftRatio>
+      <onClick>g5.chartLine = !g5.chartLine;
+g5.refresh();
+
+
+
+
+</onClick>
+      <sizeRatio>0.244604316546763</sizeRatio>
+      <text>折线/柱状</text>
+      <top>23</top>
+      <topRatio>0.306666666666667</topRatio>
+      <width>139</width>
+      <widthRatio>0.106431852986217</widthRatio>
+    </control>
+    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem2">
+      <backgroundColor>FF8000</backgroundColor>
+      <backgroundImg>xz_bn.png</backgroundImg>
+      <height>702</height>
+      <heightRatio>0.860294117647059</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.537519142419602</sizeRatio>
+      <top>75</top>
+      <topRatio>0.0919117647058824</topRatio>
+      <width>1306</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/layouty1/layoutyitem2/panel5">
+      <backgroundImg>shadowY.png</backgroundImg>
+      <backgroundImgMode>stretch</backgroundImgMode>
+      <dockX>fill</dockX>
+      <dockY>top</dockY>
+      <height>18</height>
+      <heightRatio>0.0256410256410256</heightRatio>
+      <left>0</left>
+      <outerTop>-7</outerTop>
+      <sizeRatio>0.0137825421133231</sizeRatio>
+      <top>-7</top>
+      <topRatio>-0.00997150997150997</topRatio>
+      <width>1306</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/layouty1/layoutyitem2/panel11">
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <height>702</height>
+      <heightRatio>1</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.537519142419602</sizeRatio>
+      <top>0</top>
+      <width>1306</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem6">
+      <backgroundColor>F4F4F4</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <heavy>55</heavy>
+      <heavyEnabled>false</heavyEnabled>
+      <height>39</height>
+      <heightRatio>0.0477941176470588</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.0298621745788668</sizeRatio>
+      <top>777</top>
+      <topRatio>0.952205882352941</topRatio>
+      <width>1306</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/layouty1/layoutyitem6/panel16">
+      <dockY>center</dockY>
+      <fontBold>true</fontBold>
+      <fontColor>198DC9</fontColor>
+      <hAlign>left</hAlign>
+      <height>27</height>
+      <heightRatio>0.692307692307692</heightRatio>
+      <left>40</left>
+      <leftRatio>0.0306278713629403</leftRatio>
+      <sizeRatio>0.0461538461538462</sizeRatio>
+      <text>X轴：时间（小时），Y轴：销售商品数量（以用户下单时间为准）</text>
+      <top>6</top>
+      <topRatio>0.153846153846154</topRatio>
+      <width>585</width>
+      <widthRatio>0.447932618683002</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/layouty1/layoutyitem6/panel19">
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockX>fill</dockX>
+      <dockY>top</dockY>
+      <height>1</height>
+      <heightRatio>0.0256410256410256</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.000765696784073507</sizeRatio>
+      <top>0</top>
+      <width>1306</width>
+      <widthRatio>1</widthRatio>
+    </control>
+  </controls>
+  <taskSet count="1">
+    <taskSetItem name="query">
+      <script1>eio.appendString8(eb.getCookie("loginToken"));
+var d = ee.getText(ee.getControl("panel21"));
+if (d.length != 10) return;
+eio.appendString8(d); 
+</script1>
+      <script2><![CDATA[var token = eio.readString8();
+var date = eio.readString8();
+
+var sql,sqlResult;
+sql = "exec getUserInfoBySession '" + db.encode(token) + "'";
+sqlResult = db.executeQuery("DB", sql);
+if (sqlResult == null) {
+    eio.appendString8("F");
+    es.logWarning("数据库执行错误, sql=" + sql);
+    return;
+}
+db.read(sqlResult);
+if (db.getString(sqlResult, "sessionId").length < 5) {
+    eio.appendString8("F");
+    eio.appendString8("token失效");
+    es.logWarning("用户token失效, sql=" + sql);
+    return;
+}   
+var userId = db.getString(sqlResult, "id");
+var companyId = db.getString(sqlResult, "companyId");
+
+//获取记录数量
+sql =
+    "SELECT dbo.product.displayName, dbo.link.name, DATEPART(month, dbo.[order].regDatetime) as [month], " +
+    "    DATEPART(day, dbo.[order].regDatetime) as [day], " +
+    "    DATEPART(hour, dbo.[order].regDatetime) as [hour], " +
+    "    sum(orderCount) as orderCount, sum(purchasePrice) as orderPrice " +
+    "FROM dbo.[order] INNER JOIN " +
+    "    dbo.product ON dbo.[order].productId = dbo.product.id INNER JOIN " +
+    "    dbo.link ON dbo.[order].channelId = dbo.link.id " +
+    "WHERE dbo.[order].regDatetime >= '" + db.encode(date) + "' " +
+    "    and dbo.[order].regDatetime <= '" + db.encode(date) + " 23:59:59.999' " +
+    "    and dbo.product.companyId = " + companyId + " " +
+    "GROUP BY " +
+    "    dbo.product.displayName, dbo.link.name, " +
+    "    DATEPART(month, dbo.[order].regDatetime), " +
+    "    DATEPART(day, dbo.[order].regDatetime), " +
+    "    DATEPART(hour, dbo.[order].regDatetime) " +
+    "ORDER BY dbo.product.displayName, dbo.link.name,[month],[day],[hour] ";
+
+sqlResult = db.executeQuery("DB", sql);   
+if (sqlResult == null) {
+    eio.appendString8("F");
+    es.logWarning("数据库执行错误, sql=" + sql);
+    return;
+}
+
+eio.appendString8("T");
+eio.appendDataSet(sqlResult,"displayName,name,month,day,hour,orderCount,orderPrice", 0, 10000); 
+
+
+]]></script2>
+      <script3>if (eio.readString8() != "T") {
+    alert("无法获取您需要的数据：" + eio.readString8());
+    return;
+}
+
+g5.dataset1 = eio.readDataSet();
+g5.refresh();
+
+</script3>
+    </taskSetItem>
+  </taskSet>
+  <gridLines count="0" />
+</page>

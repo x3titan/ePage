@@ -1,0 +1,17 @@
+﻿<skin>
+  <imageType>png</imageType>
+  <displayName>按钮-胶囊阴影蓝色</displayName>
+  <creator>谭江天</creator>
+  <resizableArea>
+    <left>22</left>
+    <top>3</top>
+    <width>33</width>
+    <height>31</height>
+  </resizableArea>
+  <clientArea>
+    <left>22</left>
+    <top>3</top>
+    <width>33</width>
+    <height>31</height>
+  </clientArea>
+</skin>

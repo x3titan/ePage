@@ -1,0 +1,15 @@
+=================================================
+设置上传文件大小：
+=================================================
+maxRequestLength 单位 KB,requestLengthDiskThreshold单位字节 
+
+  <system.web> 下加入
+
+<httpRuntime maxRequestLength="102400" executionTimeout="600"  requestLengthDiskThreshold="1000000"/>
+
+
+=================================================
+eEngine报错远程电脑无法显示错误页并提示错误。
+=================================================
+  <system.web> 下加入
+<customErrors mode="RemoteOnly" defaultRedirect="mycustompage.htm"/>

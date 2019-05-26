@@ -1,0 +1,17 @@
+﻿<skin>
+  <imageType>png</imageType>
+  <displayName>按钮-白色大阴影</displayName>
+  <creator>custom</creator>
+  <resizableArea>
+    <left>22</left>
+    <top>9</top>
+    <width>109</width>
+    <height>41</height>
+  </resizableArea>
+  <clientArea>
+      <left>22</left>
+      <top>9</top>
+      <width>111</width>
+      <height>44</height>
+  </clientArea>
+</skin>

@@ -1,0 +1,16 @@
+<skin>
+  <imageType>png</imageType>
+  <displayName>题头1</displayName>
+  <resizableArea>
+    <left>4</left>
+    <top>1</top>
+    <width>3</width>
+    <height>5</height>
+  </resizableArea>
+  <clientArea>
+    <left>4</left>
+    <top>3</top>
+    <width>3</width>
+    <height>3</height>
+  </clientArea>
+</skin>
